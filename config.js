@@ -2,8 +2,8 @@
 
 module.exports = {
   url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Jeong\'s  blog',
+  subtitle: '개발 기록들을 저장 하는 곳 입니다.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -23,14 +23,14 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Junyoung Jeong',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: '개발 기록들을 저장 하는 곳 입니다.',
     contacts: {
-      email: '#',
+      email: 'abcdefssk1@gmail.com',
       telegram: '#',
       twitter: '#',
-      github: '#',
+      github: 'bcc829',
       rss: '#',
       vkontakte: '#'
     }
