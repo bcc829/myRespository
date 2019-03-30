@@ -5,9 +5,9 @@ module.exports = {
   title: 'Jeong\'s  blog',
   subtitle: '개발 기록들을 저장 하는 곳 입니다.',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
+  disqusShortname: 'jeong-develop-repository',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-137358621-1',
   menu: [
     {
       label: 'Articles',
@@ -31,7 +31,7 @@ module.exports = {
       telegram: '#',
       twitter: '#',
       github: 'bcc829',
-      rss: '#',
+      rss: './public/rss.xml',
       vkontakte: '#'
     }
   }
