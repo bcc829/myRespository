@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://jeong-develop-repository.netlify.com',
   title: 'Jeong\'s  blog',
   subtitle: '개발 기록들을 저장 하는 곳 입니다.',
   copyright: '© All rights reserved.',
