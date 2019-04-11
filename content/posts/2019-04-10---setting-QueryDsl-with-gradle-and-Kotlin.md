@@ -18,7 +18,7 @@ QueryDsl을 사용하기 위해 셋팅을 하여도 잘 되지 않아 고생 한
 
 example 코드를 찾았지만 QueryDsl 버전을 3.xx로 쓰고 있어 아래와 같이 버전을 4.xx로 수정하였습니다.
 
-```
+```tsx
 buildscript {
   	ext {
 		kotlinVersion = '1.3.11'
@@ -51,7 +51,8 @@ idea {
 }
 ```
 build.gradle에 위의 내용들을 추가 후 
-```
+
+```tsx
 gradlew compileKotlin
 ```
 compileKotlin task를 실행 하게 되면
