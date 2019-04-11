@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jeong's  blog]]></title><description><![CDATA[개발 기록들을 저장 하는 곳 입니다.]]></description><link>https://jeong-develop-repository.netlify.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 10 Apr 2019 08:47:47 GMT</lastBuildDate><item><title><![CDATA[Kotlin에서 QueryDsl 셋팅하기(Gradle)]]></title><description><![CDATA[Kotlin에서 QueryDsl 셋팅]]></description><link>https://jeong-develop-repository.netlify.com/posts/setting-QueryDsl-with-gradle-and-Kotlin/</link><guid isPermaLink="false">https://jeong-develop-repository.netlify.com/posts/setting-QueryDsl-with-gradle-and-Kotlin/</guid><pubDate>Wed, 10 Apr 2019 07:31:32 GMT</pubDate><content:encoded>&lt;p&gt;개인 공부를 위해 Kotlin + Spring boot를 이용하여 프로젝트를 진행하던 중
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jeong's  blog]]></title><description><![CDATA[개발 기록들을 저장 하는 곳 입니다.]]></description><link>https://jeong-develop-repository.netlify.com</link><generator>RSS for Node</generator><lastBuildDate>Thu, 11 Apr 2019 07:14:32 GMT</lastBuildDate><item><title><![CDATA[Kotlin에서 QueryDsl 셋팅하기(Gradle)]]></title><description><![CDATA[Kotlin에서 QueryDsl 셋팅]]></description><link>https://jeong-develop-repository.netlify.com/posts/setting-QueryDsl-with-gradle-and-Kotlin/</link><guid isPermaLink="false">https://jeong-develop-repository.netlify.com/posts/setting-QueryDsl-with-gradle-and-Kotlin/</guid><pubDate>Wed, 10 Apr 2019 07:31:32 GMT</pubDate><content:encoded>&lt;p&gt;개인 공부를 위해 Kotlin + Spring boot를 이용하여 프로젝트를 진행하던 중
 QueryDsl을 사용하기 위해 셋팅을 하여도 잘 되지 않아 고생 한 적이 있습니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/media/querydsl_commit.PNG&quot; alt=&quot;querydsl_commit&quot;&gt;
 (spring boot도 JPA도 Kotlin도 gradle마저 익숙하지 않아 QueryDsl을 설정 하다가 오랜 기간 손을 놓은 모습…)&lt;/p&gt;
 &lt;p&gt;example 코드를 찾았지만 QueryDsl 버전을 3.xx로 쓰고 있어 아래와 같이 버전을 4.xx로 수정하였습니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;buildscript {
-  	ext {
-		kotlinVersion = &amp;#39;1.3.11&amp;#39;
-		queryDslVersion = &amp;#39;4.1.3&amp;#39; //QueryDsl version
-  }
-  repositories {
-    mavenCentral()
-  }
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;buildscript &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  	ext &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		kotlinVersion &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;1.3.11&apos;&lt;/span&gt;
+		queryDslVersion &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;4.1.3&apos;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//QueryDsl version&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  repositories &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;mavenCentral&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-  dependencies {
-    classpath &amp;quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&amp;quot;
-  }
-}
+  dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    classpath &lt;span class=&quot;token string&quot;&gt;&quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-apply plugin: &amp;#39;kotlin&amp;#39;
-apply plugin: &amp;#39;kotlin-kapt&amp;#39; // Annotation Processing with Kotlin
-apply plugin: &amp;#39;idea&amp;#39;
+apply plugin&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;kotlin&apos;&lt;/span&gt;
+apply plugin&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;kotlin-kapt&apos;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Annotation Processing with Kotlin&lt;/span&gt;
+apply plugin&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;idea&apos;&lt;/span&gt;
 
-dependencies {
-  compile (&amp;quot;com.querydsl:querydsl-jpa:${queryDslVersion}&amp;quot;)
-  kapt (&amp;quot;com.querydsl:querydsl-apt:${queryDslVersion}:jpa&amp;quot;)
-}
+dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;com.querydsl:querydsl-jpa:${queryDslVersion}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;kapt&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;com.querydsl:querydsl-apt:${queryDslVersion}:jpa&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-idea {
-  module {
-    def kaptMain = file(&amp;#39;build/generated/source/kapt/main&amp;#39;)
-    sourceDirs += kaptMain
-    generatedSourceDirs += kaptMain
-  }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+idea &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    def kaptMain &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;build/generated/source/kapt/main&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    sourceDirs &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; kaptMain
+    generatedSourceDirs &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; kaptMain
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;build.gradle에 위의 내용들을 추가 후 &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gradlew compileKotlin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;gradlew compileKotlin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;compileKotlin task를 실행 하게 되면&lt;/p&gt;
 &lt;p&gt;다음과 같이 build/generated/source/kapt/main에 Qdomain이 생성 됩니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/media/Qdomain.PNG&quot; alt=&quot;Qdomain&quot;&gt;&lt;/p&gt;
