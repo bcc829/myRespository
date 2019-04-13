@@ -7,10 +7,10 @@ slug: "/posts/setting-QueryDsl-with-gradle-and-Kotlin/"
 category: "개발"
 tags:
   - "개발"
-	- "Kotlin"
-	- "Gradle"
-	- "spring boot"
-	- "QueryDsl"
+- "Kotlin"
+- "Gradle"
+- "spring boot"
+- "QueryDsl"
 description: "Kotlin에서 QueryDsl 셋팅"
 ---
 
