@@ -7,10 +7,10 @@ slug: "/posts/setting-QueryDsl-with-gradle-and-Kotlin/"
 category: "개발"
 tags:
   - "개발"
-- "Kotlin"
-- "Gradle"
-- "spring boot"
-- "QueryDsl"
+  - "Kotlin"
+  - "Gradle"
+  - "spring boot"
+  - "QueryDsl"
 description: "Kotlin에서 QueryDsl 셋팅"
 ---
 
@@ -38,7 +38,7 @@ buildscript {
 }
 
 apply plugin: 'kotlin'
-apply plugin: 'kotlin-kapt' // Annotation Processing with Kotlin
+apply plugin: 'kotlin-kapt' //Annotation Processing with Kotlin
 apply plugin: 'idea'
 
 dependencies {
@@ -68,5 +68,4 @@ compileKotlin task를 실행 하게 되면
 
 
 ##Ref
-
 https://github.com/JetBrains/kotlin-examples/tree/master/gradle/kotlin-querydsl

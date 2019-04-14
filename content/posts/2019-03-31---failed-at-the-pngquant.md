@@ -8,6 +8,8 @@ category: "개발"
 tags:
   - "개발"
   - "이슈"
+  - "npm"
+  - "pngquant"
 description: "pngquant-bin@5.0.2 postinstall script 에러 해결법"
 ---
 
