@@ -12,7 +12,6 @@ module.exports = {
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
     author: siteConfig.author,
-    siteUrl: 'https://jeong-develop-repository.netlify.com'
   },
   plugins: [
     {
@@ -177,7 +176,6 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
-    `gatsby-plugin-sitemap`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-sass',
