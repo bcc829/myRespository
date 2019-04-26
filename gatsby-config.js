@@ -185,6 +185,14 @@ module.exports = {
           camelCase: false,
         }
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: siteConfig.url,
+        sitemap: siteConfig.url + '/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     }
   ]
 };
