@@ -34,7 +34,7 @@ https://www.baeldung.com/spring-security-redirect-login
 
 SNS 로그인 후 SuccessHandler에서 authentication 객체에 들어있는 userAuthentication에 접근 하여 했으나 가져 올 수 있는 건 Authorities, Credentials, Details, Principal 밖에 없어 의아 했으나 
 
-authentication을 OAuth2Authentication으로 형변환 userAuthentication 해주면 접근 할 수 있었습니다.
+authentication을 OAuth2Authentication으로 형변환 해주면 userAuthentication에 접근 할 수 있습니다.
 ###Ref
 https://www.popit.kr/spring-security-oauth2-%EC%86%8C%EC%85%9C-%EC%9D%B8%EC%A6%9D/
 * * *
